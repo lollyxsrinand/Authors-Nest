@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 
 export async function POST(req: Request) {
   const { uid } = await req.json();
-
+  console.log("hello");
   const token = jwt.sign({ uid }, process.env.NEXT_PUBLIC_JWT_SECRET ?? "", {
     expiresIn: "14d",
   });

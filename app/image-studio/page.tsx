@@ -1,9 +1,11 @@
 import React from 'react'
+import { isAuthenticated } from "@/utils/isAuthenticated";
 
-const ImageStudio = () => {
+const ImageStudio = async () => {
+  await isAuthenticated();
   return (
     <div>
-      
+      Image Studio Page
     </div>
   )
 }

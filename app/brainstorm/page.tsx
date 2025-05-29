@@ -1,9 +1,11 @@
 import React from 'react'
+import { isAuthenticated } from "@/utils/isAuthenticated";
 
-const Brainstorm = () => {
+const Brainstorm = async () => {
+  await isAuthenticated();
   return (
     <div>
-      
+      Brainstorm Page
     </div>
   )
 }
