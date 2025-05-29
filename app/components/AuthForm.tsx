@@ -72,20 +72,14 @@ export const AuthForm = ({ AuthType }: AuthForm) => {
               name="password"
             />
           </div>
-          <div className="bg-[#242628] w-full p-[10px] rounded-[4px] text-white">
+          <button type="submit" className="bg-[#242628] w-full p-[10px] rounded-[4px] text-white">
             {AuthType}
-          </div>
-          <div>
-            or{" "}
-            <button type="submit">
-              <a
-                className="font-bold"
-                href={AuthType === "Login" ? "/signup" : "/login"}
-              >
-                {AuthType === "Login" ? "signup" : "login"}
-              </a>
-            </button>
-          </div>
+          </button>
+          <p> or {" "}
+            <a className="font-bold" href={AuthType === "Login" ? "/signup" : "/login"}>
+              {AuthType === "Login" ? "signup" : "login"}
+            </a>
+          </p>
         </form>
       </div>
     </>
