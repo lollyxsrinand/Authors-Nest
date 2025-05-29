@@ -1,4 +1,3 @@
-import { AuthForm } from "../components/AuthForm";
 import { isAuthenticated } from "@/utils/isAuthenticated";
 
 const Home = async () => {

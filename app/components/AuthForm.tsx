@@ -26,7 +26,6 @@ export const AuthForm = ({ AuthType }: AuthForm) => {
       const user = await (AuthType === "Login"
         ? signInWithEmailAndPassword(auth, email, password)
         : createUserWithEmailAndPassword(auth, email, password));
-      console.log("hello");
       if (AuthType === "Signup") {
         const res = await fetch("http://localhost:4000/create-user", {
           method: "POST",
