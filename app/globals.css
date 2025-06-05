@@ -4,25 +4,13 @@
 @theme {
     --color-white-pitch: #ffffff;
     --color-white: #f8f8f8;
-    --color-gray-100: #e5e5ea;
-    --color-gray-200: #ced0d3;
-    --color-gray-300: #3b3c3e;
-    --color-gray-400: #242628;
+    --color-gray-1: #e5e5ea;
+    --color-gray-2: #ced0d3;
+    --color-gray-3: #3b3c3e;
+    --color-gray-4: #242628;
     --color-black: #09090a;
-    --color-red: #ff2e2e;
-    --color-red-light: #ffc5c5;
 }
 
 * {
     font-family: "Inter", sans-serif;
-}
-
-.sidebar {
-    button {
-        @apply rounded-lg w-full h-fit flex gap-2 p-2 items-center;
-    }
-}
-
-.sidebar-button {
-    @apply w-full h-fit flex gap-2 p-2 items-center;
 }
