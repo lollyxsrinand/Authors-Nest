@@ -28,11 +28,12 @@ export const AuthForm = ({ AuthType }: AuthForm) => {
         : createUserWithEmailAndPassword(auth, email, password));
       if (AuthType === "Signup") {
         const res = await fetch("http://localhost:4000/create-user", {
-          method: "POST",
+          method: "GET",
           headers: {
             Authorization: `Bearer ${user.user.uid}`,
           },
         });
+        console.log(res)
       }
 
       const response = await fetch("/api/login", {
