@@ -8,13 +8,15 @@
     --color-gray-2: #ced0d3;
     --color-gray-3: #3b3c3e;
     --color-gray-4: #242628;
-    --color-black: #09090a;
+    --color-black: #000000;
 }
 
 * {
     font-family: "Inter", sans-serif;
 }
-
+.button {
+  @apply p-2.5 rounded-lg bg-white text-black font-semibold hover:bg-neutral-200 transition-colors duration-300 ease-in-out;
+}
 @keyframes fade-in {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -31,3 +33,23 @@
   .animate-fade-in-delay-2 {
     animation: fade-in 1s ease-out 0.6s both;
   }
+  /* global.css or inside a <style> tag */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f; /* dark track */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563; /* gray thumb */
+  border-radius: 9999px;
+  border: 2px solid #1f1f1f; /* border to give it that inset feel */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af; /* lighter on hover */
+}

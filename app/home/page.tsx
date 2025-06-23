@@ -5,21 +5,25 @@ import Icon from "../components/Icon";
 import { AskPrompt } from "../components/AskPromt";
 import { JwtPayload } from "jsonwebtoken";
 
-
 const Home = async () => {
   const token = await isAuthenticated() as JwtPayload
   if(!token) {
     redirect('/login')
   }
-  const userRes = await fetch("http://localhost:4000/get-user-data", {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${token.uid}`,
-    },
-  });
-  const user = await userRes.json()
+  let user = null
+    try {
+      const userRes = await fetch("http://localhost:4000/get-user-data", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token.uid}`,
+        },
+      });
+      user = await userRes.json()
+    } catch(error) {
+      console.log("Erorr fetching", error)
+    }
 
-  if(!user.name) {
+  if(!user || !user.name) {
     return <AskPrompt token={token.uid}/>
   }
   console.log(user)
@@ -50,4 +54,3 @@ const Home = async () => {
   )
 };
 export default Home;
-

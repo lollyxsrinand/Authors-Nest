@@ -1,7 +1,7 @@
-// app/api/gen-image/route.js
 export async function POST(req: Request) {
   const body = await req.json();
 
+  // "open ai"
   const accountId = "4fbdcb87ed5985b6279ad89f2253ee80";
   const apiToken = "qNaZl5ykz-VKlZVUzaLx7h-cZrHMYHJ_2F9fc00c";
 
