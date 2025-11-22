@@ -33,7 +33,7 @@ export const AuthForm = ({ AuthType }: { AuthType: "Login" | "Signup" }) => {
 
       if ((await res.json()).status === "success") {
         // toast.success(`${AuthType} successful!`);
-        router.push("/home");
+        router.push("/write");
       }
     } catch (error) {
       // toast.error(((error as FirebaseError).code).replace('auth/', '').replaceAll('-', ' '));
